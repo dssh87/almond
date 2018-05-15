@@ -5,9 +5,12 @@
     
     <mapper namespace="org.zerock.mapper.BoardMapper">
     
-    <select resultType="org.zerock.domain.BoardVO"  id="list">
-    
-    select * from tbl_aboard order by bno desc limit #{skip},10 
-    
+    <select resultType="org.zerock.domain.BoardVO"  id="list">    
+    select * from tbl_aboard order by bno desc limit #{skip},10     
     </select>
+    
+    <select id="getTotal" resultType="int">
+    select count(*) from tbl_aboard
+    </select>
+    
     </mapper>

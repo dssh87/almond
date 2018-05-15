@@ -8,5 +8,7 @@ import org.zerock.domain.Criteria;
 public interface BoardMapper {
 	
 	public List<BoardVO> list(Criteria cri);
+	
+	public int getTotal(Criteria cri);
 
 }
